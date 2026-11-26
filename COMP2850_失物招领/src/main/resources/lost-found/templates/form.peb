@@ -1,0 +1,12 @@
+{% extends "base.peb" %}{% block title %}Upload an item{% endblock %}{% block body %}
+<div class="narrow"><a class="back" href="/lost-found">← Item board</a><h1 class="inner-title">Upload an item</h1><p class="lede">Add what you know so its owner can recognise it.</p>
+<form method="post" action="/lost-found/items" enctype="multipart/form-data" class="entry" id="item-form">
+{% if error is not null %}<div class="notice" role="alert" tabindex="-1" id="error-note"><strong>{{ error.code }}</strong> {{ error.message }}{% if error.field is not null %} <a href="#{{ error.field }}">Go to field</a>{% endif %}</div>{% endif %}
+<input type="hidden" name="key" value="{{ key }}">
+<div class="two"><label for="name">Item name <span>Required</span><input type="text" id="name" name="name" maxlength="100" value="{{ form.name }}" placeholder="e.g. Red pencil case" required></label>
+<label for="date">Date found <span>Required</span><input type="date" id="date" name="date" value="{{ form.date }}" max="{{ today }}" required></label></div>
+<label for="tags">Tags <span>Optional</span><input id="tags" type="text" name="tags" value="{{ form.tags }}" placeholder="e.g. red, stationery" aria-describedby="tags-help"></label>
+<p class="hint" id="tags-help">Separate tags with commas. Add up to 8 colours, materials or other keywords.</p>
+<label for="place">Collection point <span>Optional</span><input name="place" id="place" type="text" maxlength="120" value="{{ form.place }}" placeholder="e.g. Library reception"></label>
+<label for="photo">Item photo <span>Optional</span></label><div class="photo-field"><input id="photo" name="photo" type="file" accept="image/png,image/jpeg" aria-describedby="photo-help"><p class="hint" id="photo-help">JPEG or PNG, up to 5 MiB. If you correct a returned form, select your photo again.</p><img id="preview" hidden alt="Selected photo preview"></div>
+<div class="actions"><button class="button primary" type="submit">Upload item <span aria-hidden="true">↗</span></button><a href="/lost-found">Cancel</a></div></form></div>{% endblock %}

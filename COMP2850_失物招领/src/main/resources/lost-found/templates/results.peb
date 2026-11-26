@@ -1,0 +1,8 @@
+<div class="section-title"><h2>{% if q %}Search results{% else %}Found items{% endif %}</h2><span class="count" data-count="{{ total }}">{{ total }} {% if total == 1 %}item{% else %}items{% endif %}</span></div>
+{% if items is empty %}<div class="empty"><div class="ticket" aria-hidden="true"><i></i><b></b></div>
+{% if q %}<h3>No matches for “{{ q }}”</h3><p>Try a shorter keyword, a colour or a different item name.</p><a class="text-link" href="/lost-found">Show all items →</a>
+{% else %}<h3>No items reported yet</h3><p>Found something? Add its name and the date you picked it up.</p><a class="text-link" href="/lost-found/new">Upload the first item →</a>{% endif %}</div>
+{% else %}<div class="cards">{% for item in items %}<a class="card" href="/lost-found/items/{{ item.id }}">
+<div class="card-media">{% if item.hasPhoto %}<img loading="lazy" alt="" src="/lost-found/items/{{ item.id }}/photo">{% else %}<div class="ticket small" aria-hidden="true"><i></i><b></b></div><span class="sr">No photo</span>{% endif %}</div>
+<div class="card-text"><time datetime="{{ item.date }}">Found {{ item.date }}</time>{% if item.example %}<span class="sample-label">Example</span>{% endif %}<h3>{{ item.name }}</h3>{% if item.tags is not empty %}<div class="tags">{% for tag in item.tags %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}{% if item.place is not empty %}<div class="place">Collection · {{ item.place }}</div>{% endif %}</div></a>{% endfor %}</div>{% endif %}
+{% if prev is not null or next is not null %}<nav class="pages" aria-label="Result pages">{% if prev %}<a href="{{ prev }}">← Previous page</a>{% endif %}{% if next %}<a href="{{ next }}">Next page →</a>{% endif %}</nav>{% endif %}

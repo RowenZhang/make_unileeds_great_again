@@ -1,0 +1,16 @@
+{% extends "base.peb" %}
+{% block title %}Delete {{ item.name }}{% endblock %}
+{% block body %}
+<div class="narrow">
+  <a class="back" href="/lost-found/items/{{ item.id }}">← Back to item</a>
+  <p class="ref">{% if item.example %}Example item{% else %}Found item{% endif %} · #{{ item.id }}</p>
+  <h1 class="inner-title">Delete “{{ item.name }}”?</h1>
+  <dl><dt>Date found</dt><dd>{{ item.date }}</dd>{% if item.place is not empty %}<dt>Collection point</dt><dd>{{ item.place }}</dd>{% endif %}</dl>
+  <p>This will permanently remove this item{% if item.hasPhoto %} and its photo{% endif %} from the board.</p>
+  <form method="post" action="/lost-found/items/{{ item.id }}/delete" class="actions">
+    <input type="hidden" name="token" value="{{ token }}">
+    <button class="button danger" type="submit">Confirm deletion</button>
+    <a href="/lost-found/items/{{ item.id }}">Cancel</a>
+  </form>
+</div>
+{% endblock %}
