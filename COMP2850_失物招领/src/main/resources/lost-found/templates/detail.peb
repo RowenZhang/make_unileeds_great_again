@@ -1,8 +1,0 @@
-{% extends "base.peb" %}{% block title %}{{ item.name }}{% endblock %}{% block body %}
-<a href="/lost-found" class="back">← Item board</a><div class="detail">
-<div class="detail-photo">{% if item.hasPhoto %}<img alt="Photo of {{ item.name }}" src="/lost-found/items/{{ item.id }}/photo">{% else %}<div class="ticket" aria-hidden="true"><i></i><b></b></div><p>No photo attached</p>{% endif %}</div>
-<article><p class="ref">{% if item.example %}Example item{% else %}Found item{% endif %} · #{{ item.id }}</p><h1 class="inner-title">{{ item.name }}</h1>
-<dl><dt>Date found</dt><dd><time datetime="{{ item.date }}">{{ item.date }}</time></dd><dt>Collection point</dt><dd>{% if item.place is not empty %}{{ item.place }}{% else %}Not provided{% endif %}</dd></dl>
-{% if tagLinks is not empty %}<h2 class="meta">Tags</h2><div class="tags">{% for tag in tagLinks %}<a href="{{ tag.url }}">{{ tag.label }}</a>{% endfor %}</div>{% endif %}
-<div class="item-actions"><a class="delete-link" href="/lost-found/items/{{ item.id }}/delete">Delete item</a></div>
-</article></div>{% endblock %}

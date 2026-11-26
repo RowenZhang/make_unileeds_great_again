@@ -1,8 +1,0 @@
-{% extends "base.peb" %}{% block body %}
-<section class="intro"><div class="heading"><h1>Lost <em>&amp;</em> found</h1><p>Search for something you’ve lost, or share an item you’ve found on campus.</p></div>
-<div class="search-strip"><form action="/lost-found" method="get" role="search" id="search-form">
-<label class="sr" for="q">Search by item name or tag</label><span class="glass" aria-hidden="true"></span>
-<input type="search" id="q" name="q" value="{{ q }}" maxlength="100" placeholder="Search by item name or tag…" autocomplete="off">
-<button class="button primary" type="submit">Search</button></form></div></section>
-<p id="search-status" class="sr" role="status" aria-live="polite"></p>
-<section id="results" aria-label="Found items">{% include "results.peb" %}</section>{% endblock %}
