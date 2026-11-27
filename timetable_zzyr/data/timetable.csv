@@ -1,0 +1,31 @@
+date,moduleCode,moduleName,type,startTime,endTime,room
+2026-11-23,COMP2850,Software Engineering,Lab,14:00,16:00,Computing Lab 2
+2026-11-23,COMP2811,User Interfaces,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-23,COMP2711,Algorithms,Seminar,11:00,12:00,Seminar Room 3
+2026-11-24,COMP2811,User Interfaces,Lab,14:00,16:00,Computing Lab 2
+2026-11-24,COMP2711,Algorithms,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-24,COMP2421,Computer Organisation,Seminar,11:00,12:00,Seminar Room 3
+2026-11-25,COMP2711,Algorithms,Lab,14:00,16:00,Computing Lab 2
+2026-11-25,COMP2421,Computer Organisation,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-25,COMP2931,Software Development,Seminar,11:00,12:00,Seminar Room 3
+2026-11-26,COMP2421,Computer Organisation,Lab,14:00,16:00,Computing Lab 2
+2026-11-26,COMP2931,Software Development,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-26,COMP2850,Software Engineering,Seminar,11:00,12:00,Seminar Room 3
+2026-11-27,COMP2931,Software Development,Lab,14:00,16:00,Computing Lab 2
+2026-11-27,COMP2850,Software Engineering,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-27,COMP2811,User Interfaces,Seminar,11:00,12:00,Seminar Room 3
+2026-11-30,COMP2711,Algorithms,Lab,14:00,16:00,Computing Lab 2
+2026-11-30,COMP2421,Computer Organisation,Lecture,09:00,10:00,Lecture Theatre A
+2026-11-30,COMP2931,Software Development,Seminar,11:00,12:00,Seminar Room 3
+2026-12-01,COMP2421,Computer Organisation,Lab,14:00,16:00,Computing Lab 2
+2026-12-01,COMP2931,Software Development,Lecture,09:00,10:00,Lecture Theatre A
+2026-12-01,COMP2850,Software Engineering,Seminar,11:00,12:00,Seminar Room 3
+2026-12-02,COMP2931,Software Development,Lab,14:00,16:00,Computing Lab 2
+2026-12-02,COMP2850,Software Engineering,Lecture,09:00,10:00,Lecture Theatre A
+2026-12-02,COMP2811,User Interfaces,Seminar,11:00,12:00,Seminar Room 3
+2026-12-03,COMP2850,Software Engineering,Lab,14:00,16:00,Computing Lab 2
+2026-12-03,COMP2811,User Interfaces,Lecture,09:00,10:00,Lecture Theatre A
+2026-12-03,COMP2711,Algorithms,Seminar,11:00,12:00,Seminar Room 3
+2026-12-04,COMP2811,User Interfaces,Lab,14:00,16:00,Computing Lab 2
+2026-12-04,COMP2711,Algorithms,Lecture,09:00,10:00,Lecture Theatre A
+2026-12-04,COMP2421,Computer Organisation,Seminar,11:00,12:00,Seminar Room 3

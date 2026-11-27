@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Timetable | UniLeeds Mini Project</title>
+  <link rel="stylesheet" href="/timetable/static/timetable.css">
+</head>
+<body>
+<a class="skip-link" href="#schedule">Skip to schedule</a>
+<header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">U</span> UniLeeds <span class="project-label">Mini Project</span></div><span class="demo-label">Demo timetable</span></header>
+<main>
+  <div class="intro"><p class="eyebrow">YOUR DAY, AT A GLANCE</p><h1>Daily Timetable</h1><p class="subtitle">Find your next class. Make time for everything in between.</p></div>
+  <section class="controls" aria-label="Choose a date">
+    <form method="get" action="/timetable"><label for="date">View a date</label><div class="date-inputs"><input id="date" name="date" type="date" value="{{ date }}" min="0001-01-01" max="9999-12-31" required><button type="submit">Show timetable</button><a class="button secondary" href="/timetable">Today</a></div></form>
+    <nav class="week-controls" aria-label="Browse weeks">{% if previousWeek %}<a href="/timetable?date={{ previousWeek }}">Previous week</a>{% endif %}{% if nextWeek %}<a href="/timetable?date={{ nextWeek }}">Next week</a>{% endif %}</nav>
+  </section>
+  <nav class="week-strip" aria-label="Days in selected week">{% for day in days %}{% if day.supported %}<a href="/timetable?date={{ day.date }}" {% if day.selected %}aria-current="date"{% endif %}><span>{{ day.name }}</span><strong>{{ day.number }}</strong></a>{% endif %}{% endfor %}</nav>
+  <section id="schedule" aria-labelledby="schedule-heading" tabindex="-1">
+    <div class="schedule-heading"><div><p class="eyebrow">{% if isToday %}TODAY'S SCHEDULE{% else %}YOUR SCHEDULE{% endif %}</p><h2 id="schedule-heading">{{ heading }}</h2></div>{% if not error %}<span class="count">{{ count }} {% if count == 1 %}class{% else %}classes{% endif %}</span>{% endif %}</div>
+    {% if error %}
+    <div class="state error" role="alert"><span class="state-icon" aria-hidden="true">!</span><h3>Timetable unavailable</h3><p>{{ error }}</p><p>Select a date above or <a href="/timetable?date={{ date }}">try this day again</a>.</p></div>
+    {% elseif count == 0 %}
+    <div class="state"><span class="state-icon" aria-hidden="true">—</span><h3>No classes scheduled</h3><p>There are no classes in the demo data for this date.</p><p>Choose another day to explore your timetable.</p></div>
+    {% else %}
+    <ol class="classes">{% for class in classes %}<li class="class-card"><div class="time"><time>{{ class.start }}</time><span>to {{ class.end }}</span></div><div class="class-info"><div class="class-meta"><span class="module-code">{{ class.code }}</span><span class="class-type">{{ class.type }}</span></div><h3>{{ class.name }}</h3><p class="room"><span>Room</span> {{ class.room }}</p></div></li>{% endfor %}</ol>
+    {% endif %}
+  </section>
+  <aside class="data-note"><strong>Plan with sample data.</strong> These are fictional classes, not an official university timetable. {% if range %}Sample dates: {{ range }}.{% endif %} Times are local to Leeds.</aside>
+</main>
+<footer>COMP2850 · Daily Timetable · Zhengyunrui Zhang</footer>
+</body>
+</html>

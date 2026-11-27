@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TimetableTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TimetableTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/uk.ac.leeds.timetable.html">uk.ac.leeds.timetable</a> &gt; TimetableTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">16</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.234s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">BOM and blank lines supported()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">CSV validation rejects bad header missing fields bad time and reversed interval()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">blank date is rejected()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">data is reread after edit without restarting()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">date boundaries render without exception()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">default today sorts classes and shows required fields()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">empty day is successful and distinct from failure()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">header only is valid empty dataset()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">html in data is escaped()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalid calendar date is rejected()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">malformed row fails instead of silently omitting classes()</td>
+<td class="success">1.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">missing file returns helpful error without path()</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">next week links retain selected weekday()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">selected day filters other classes()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">stylesheet served but csv remains private()</td>
+<td class="success">0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">today uses Leeds timezone across midnight()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre id="class-stdout">20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.101 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 WARN  io.ktor.test - Timetable file contains invalid data
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.002 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 WARN  io.ktor.test - Timetable file could not be read
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.0 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.0 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.001 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.002 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+20:53:25 INFO  io.ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active.
+20:53:25 INFO  io.ktor.test - Application started in 0.002 seconds.
+20:53:25 INFO  io.ktor.test - Responding at http://localhost:80
+20:53:25 INFO  io.ktor.test - Responding at https://localhost:443
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="class-stdout">Copy</button>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.2.1</a> at 2026年11月26日 20:53:25</p>
+</div>
+</div>
+</body>
+</html>
